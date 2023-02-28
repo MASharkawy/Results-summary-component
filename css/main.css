@@ -1,0 +1,197 @@
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-slate-blue : hsl(252, 100%, 67%);
+    --Light-royal-blue : hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --White-col: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    --main-shadow: hsla(213, 100%, 58%, 10%);
+
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White-col);
+}
+.container {
+    box-shadow: 20px 5px 20px 1px var(--main-shadow);
+    border-radius: 32px;
+    height: 465px;
+    background-color: var(--White-col);
+}
+.card {
+    width: 680px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.box-one {
+    background-image: linear-gradient(180deg, var(--Light-slate-blue), var(--Light-royal-blue));
+    padding: 20px;
+    text-align: center;
+    border-radius: 35px;
+    height: 465px;
+}
+.box-one h3 {
+    color: var(--Light-lavender);
+    margin: 10px 0 0 0;
+}
+.box-one p {
+    color: var(--Pale-blue);
+    margin: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+.box-one .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    padding: 20px;
+    margin: 30px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--Light-lavender);
+}
+.box-one .circle span {
+    font-weight: 800;
+    font-size: 70px;
+    color: var(--White-col);
+}
+.box-one b {
+    color: var(--White-col);
+    font-size: 30px;
+}
+.box-two {
+    height: 465px;
+    background-color: var(--White-col);
+    padding: 20px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.box-two h2 {
+    margin: 0 0 20px 0;
+}
+.box-two div:nth-child(2) {
+    background-color: hsl(0, 100%, 67%, 5%);
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.box-two div:nth-child(2) p {
+    color: var(--light-red);
+    font-weight: 700;
+    position: relative;
+    right: 55px;
+}
+.box-two div:nth-child(3) {
+    background-color: hsl(39, 100%, 56%, 5%);
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.box-two div:nth-child(3) p {
+    font-weight: 700;
+    color: var(--Orangey-yellow);
+    position: relative;
+    right: 55px;
+}
+.box-two div:nth-child(4) {
+    background-color: hsl(166, 100%, 37%, 5%);
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.box-two div:nth-child(4) p {
+    color: var(--Green-teal);
+    font-weight: 700;
+    position: relative;
+    right: 55px;
+}
+.box-two div:nth-child(5) {
+    background-color: hsl(234, 85%, 45%, 5%);
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.box-two div:nth-child(5) p {
+    color: var(--Cobalt-blue);
+    font-weight: 700;
+    position: relative;
+    right: 55px;
+}
+.box-two div:nth-child(2) span b,
+.box-two div:nth-child(3) span b,
+.box-two div:nth-child(4) span b,
+.box-two div:nth-child(5) span b {
+    color: var(--Dark-gray-blue);
+}
+.box-two div:nth-child(2) span,
+.box-two div:nth-child(3) span,
+.box-two div:nth-child(4) span,
+.box-two div:nth-child(5) span {
+    color: gray;
+}
+.box-two button {
+    outline: none;
+    border: none;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White-col);
+    width: 100%;
+    padding: 20px;
+    border-radius: 40px;
+    margin: 15px 0;
+    font-weight: 700;
+}
+.box-two button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(180deg, var(--Light-slate-blue), var(--Light-royal-blue));
+}
+@media (max-width: 767px) {
+    body {
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .container {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        display: flex;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-one {
+        padding: 0;
+        width: 100%;
+        border-radius: 0 0 35px 35px;
+    }
+    .box-two {
+        width: 100%;
+    }
+}
